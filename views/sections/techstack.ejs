@@ -1,0 +1,63 @@
+<%#
+  Tech Stack Section
+  - Grid of technology icons grouped by category
+  - Devicon CDN for icons
+%>
+
+<section id="techstack" class="relative py-20 md:py-32 bg-jjk-darker/50">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    
+    <%# Section Header %>
+    <div data-aos="fade-up" class="text-center mb-16">
+      <span class="text-jjk-purple-light font-mono text-sm mb-2 block">// Tech Stack</span>
+      <h2 class="section-heading">
+        <span class="text-gradient">Teknologi</span> yang Digunakan
+      </h2>
+      <p class="section-subheading">Tools dan teknologi yang saya kuasai dalam pengembangan</p>
+    </div>
+
+    <%# Group technologies by category %>
+    <% 
+      const categories = {};
+      data.techStack.forEach(t => {
+        if (!categories[t.category]) categories[t.category] = [];
+        categories[t.category].push(t);
+      });
+    %>
+
+    <div class="space-y-12">
+      <% Object.keys(categories).forEach((category, catIdx) => { %>
+        <div data-aos="fade-up" data-aos-delay="<%= catIdx * 50 %>">
+          <h3 class="text-lg font-semibold text-white font-display mb-6 flex items-center gap-3">
+            <span class="w-8 h-0.5 bg-jjk-purple/50 rounded-full"></span>
+            <%= category %>
+            <span class="w-8 h-0.5 bg-jjk-purple/50 rounded-full"></span>
+          </h3>
+          
+          <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-4">
+            <% categories[category].forEach((tech, index) => { %>
+              <div class="glass-card p-4 text-center group hover:border-jjk-purple/30 hover:shadow-neon transition-all duration-300 cursor-default"
+                   data-aos="fade-up" data-aos-delay="<%= 50 + index * 30 %>">
+                
+                <%# Tech icon %>
+                <div class="w-12 h-12 mx-auto mb-3 flex items-center justify-center">
+                  <% if (tech.icon) { %>
+                    <img src="<%= tech.icon %>" alt="<%= tech.name %>" 
+                         class="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
+                         onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'w-10 h-10 rounded-xl bg-jjk-purple/20 flex items-center justify-center\'><span class=\'text-xs font-bold text-jjk-purple-light\'>' + this.alt.charAt(0) + '</span></div>'">
+                  <% } else { %>
+                    <div class="w-10 h-10 rounded-xl bg-jjk-purple/20 flex items-center justify-center group-hover:bg-jjk-purple/30 transition-colors">
+                      <span class="text-xs font-bold text-jjk-purple-light"><%= tech.name.charAt(0) %></span>
+                    </div>
+                  <% } %>
+                </div>
+                
+                <span class="text-xs text-gray-400 group-hover:text-gray-200 transition-colors font-medium"><%= tech.name %></span>
+              </div>
+            <% }) %>
+          </div>
+        </div>
+      <% }) %>
+    </div>
+  </div>
+</section>

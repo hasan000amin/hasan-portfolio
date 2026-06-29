@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id" class="dark">
+<head>
+  <%- include('../partials/head', { title, description, siteTitle }) %>
+</head>
+<body class="bg-jjk-dark text-gray-100 min-h-screen">
+
+  <%# Navigation %>
+  <%- include('../partials/navbar', { data }) %>
+
+  <%# Particle Background %>
+  <canvas id="particles-canvas"></canvas>
+
+  <%# Main Content %>
+  <main>
+    <%- include('../sections/hero', { data }) %>
+    <%- include('../sections/about', { data }) %>
+    <%- include('../sections/skills', { data }) %>
+    <%- include('../sections/experience', { data }) %>
+    <%- include('../sections/projects', { data }) %>
+    <%- include('../sections/services', { data }) %>
+    <%- include('../sections/techstack', { data }) %>
+    <%- include('../sections/certificates', { data }) %>
+    <%- include('../sections/contact', { data }) %>
+  </main>
+
+  <%# Footer - only when data exists %>
+  <% if (data) { %>
+    <%- include('../partials/footer', { data }) %>
+  <% } %>
+
+  <%# Scripts %>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    // Initialize AOS
+    AOS.init({
+      duration: 800,
+      once: true,
+      offset: 100,
+      easing: 'ease-out-cubic',
+    });
+  </script>
+  <script src="/js/main.js"></script>
+</body>
+</html>

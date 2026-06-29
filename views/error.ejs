@@ -1,0 +1,68 @@
+<%#
+  Error Page
+  - Simple error display with neon effect
+  - No data dependency
+%><!DOCTYPE html>
+<html lang="id" class="dark">
+<head>
+  <%- include('partials/head', { title, description: description || 'Error', siteTitle: 'Error' }) %>
+  <style>
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #0a0a0f;
+    }
+    .error-code {
+      font-size: clamp(6rem, 15vw, 12rem);
+      line-height: 1;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="particles-canvas" style="position:fixed;inset:0;z-index:0;"></canvas>
+  
+  <div class="relative z-10 text-center px-6" data-aos="fade-up">
+    <h1 class="error-code font-display font-bold text-jjk-purple text-neon"><%= error.code %></h1>
+    <p class="text-2xl text-gray-400 mb-8"><%= error.message %></p>
+    <p class="text-gray-600 mb-8 text-sm max-w-md mx-auto">
+      <%= error.description || 'Halaman yang Anda cari tidak ditemukan atau sedang bermasalah' %>
+    </p>
+    <a href="/" class="btn-glow inline-flex">Kembali ke Beranda</a>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true });
+    
+    // Simple particles
+    const canvas = document.getElementById('particles-canvas');
+    const ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    const particles = Array.from({length: 40}, () => ({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      size: Math.random() * 2 + 0.5,
+      speedX: (Math.random() - 0.5) * 0.3,
+      speedY: (Math.random() - 0.5) * 0.3,
+      opacity: Math.random() * 0.3 + 0.1,
+    }));
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      particles.forEach(p => {
+        p.x += p.speedX; p.y += p.speedY;
+        if (p.x < 0 || p.x > canvas.width) p.speedX *= -1;
+        if (p.y < 0 || p.y > canvas.height) p.speedY *= -1;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(124, 58, 237, ${p.opacity})`;
+        ctx.fill();
+      });
+      requestAnimationFrame(animate);
+    }
+    animate();
+  </script>
+</body>
+</html>

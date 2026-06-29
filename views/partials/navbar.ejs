@@ -1,0 +1,75 @@
+<%#
+  Navigation Bar
+  - Fixed glassmorphism navbar
+  - Responsive with mobile hamburger menu
+  - Dark/Light mode toggle
+%>
+
+<nav class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" id="navbar">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="flex items-center justify-between h-16 md:h-20">
+      
+      <%# Logo %>
+      <a href="#hero" class="flex items-center gap-2 group">
+        <span class="w-8 h-8 rounded-lg bg-jjk-purple flex items-center justify-center text-white font-bold text-sm 
+                     group-hover:shadow-neon transition-all duration-300">
+          H
+        </span>
+        <span class="font-display font-bold text-lg text-white group-hover:text-jjk-purple-light transition-colors">
+          Hasan<span class="text-jjk-purple-light">.</span>
+        </span>
+      </a>
+
+      <%# Desktop Navigation %>
+      <div class="hidden md:flex items-center gap-1">
+        <% (data.navLinks || []).forEach(link => { %>
+          <a href="<%= link.href %>" 
+             class="nav-link px-3 py-2 text-sm">
+            <%= link.label %>
+          </a>
+        <% }) %>
+        
+        <%# Theme Toggle %>
+        <button id="theme-toggle" class="ml-4 p-2.5 rounded-xl glass-card hover:border-jjk-purple/30 transition-all duration-300" 
+                aria-label="Toggle theme">
+          <svg id="theme-icon-dark" class="w-5 h-5 text-yellow-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+          </svg>
+          <svg id="theme-icon-light" class="w-5 h-5 text-gray-300 hidden" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"/>
+          </svg>
+        </button>
+      </div>
+
+      <%# Mobile Menu Button %>
+      <div class="flex items-center gap-2 md:hidden">
+        <button id="theme-toggle-mobile" class="p-2.5 rounded-xl glass-card hover:border-jjk-purple/30 transition-all duration-300" 
+                aria-label="Toggle theme">
+          <svg class="w-5 h-5 text-yellow-400" id="theme-icon-dark-mobile" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+          </svg>
+          <svg class="w-5 h-5 text-gray-300 hidden" id="theme-icon-light-mobile" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"/>
+          </svg>
+        </button>
+        <button id="mobile-menu-btn" class="p-2.5 rounded-xl glass-card hover:border-jjk-purple/30 transition-all duration-300" aria-label="Menu">
+          <svg class="w-6 h-6 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <%# Mobile Navigation Menu %>
+  <div id="mobile-menu" class="hidden md:hidden glass-card mx-4 mb-2 p-4 rounded-2xl border-jjk-purple/20">
+    <div class="flex flex-col gap-1">
+      <% (data.navLinks || []).forEach(link => { %>
+        <a href="<%= link.href %>" 
+           class="nav-link px-3 py-3 text-sm rounded-xl hover:bg-jjk-glass-medium transition-all duration-300">
+          <%= link.label %>
+        </a>
+      <% }) %>
+    </div>
+  </div>
+</nav>
