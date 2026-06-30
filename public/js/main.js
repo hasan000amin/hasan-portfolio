@@ -74,19 +74,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const mobileMenu = document.getElementById('mobile-menu');
 
   if (mobileMenuBtn && mobileMenu) {
+    const menuIconOpen = document.getElementById('menu-icon-open');
+    const menuIconClose = document.getElementById('menu-icon-close');
+    
     mobileMenuBtn.addEventListener('click', () => {
       mobileMenu.classList.toggle('hidden');
-      
-      // Animate hamburger icon
-      const icon = mobileMenuBtn.querySelector('svg');
-      if (!mobileMenu.classList.contains('hidden')) {
-        icon.innerHTML = `
-          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
-        `;
-      } else {
-        icon.innerHTML = `
-          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
-        `;
+      // Toggle icons
+      if (menuIconOpen && menuIconClose) {
+        menuIconOpen.classList.toggle('hidden');
+        menuIconClose.classList.toggle('hidden');
       }
     });
 
@@ -94,10 +90,10 @@ document.addEventListener('DOMContentLoaded', () => {
     mobileMenu.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         mobileMenu.classList.add('hidden');
-        const icon = mobileMenuBtn.querySelector('svg');
-        icon.innerHTML = `
-          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
-        `;
+        if (menuIconOpen && menuIconClose) {
+          menuIconOpen.classList.remove('hidden');
+          menuIconClose.classList.add('hidden');
+        }
       });
     });
   }
