@@ -5,17 +5,17 @@
   - Dark/Light mode toggle
 %>
 
-<nav class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" id="navbar">
+<nav class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 overflow-x-hidden" id="navbar">
   <div class="max-w-6xl mx-auto px-4 sm:px-6">
     <div class="flex items-center justify-between h-14 sm:h-16 md:h-20">
       
       <%# Logo %>
-      <a href="#hero" class="flex items-center gap-2 group">
+      <a href="#hero" class="flex items-center gap-2 group shrink-0">
         <span class="w-8 h-8 rounded-lg bg-jjk-purple flex items-center justify-center text-white font-bold text-sm 
                      group-hover:shadow-neon transition-all duration-300">
           H
         </span>
-        <span class="font-display font-bold text-lg text-white group-hover:text-jjk-purple-light transition-colors">
+        <span class="font-display font-bold text-lg text-white group-hover:text-jjk-purple-light transition-colors max-sm:hidden">
           Hasan<span class="text-jjk-purple-light">.</span>
         </span>
       </a>
@@ -65,7 +65,7 @@
   </div>
 
   <%# Mobile Navigation Menu %>
-  <div id="mobile-menu" class="hidden md:hidden glass-card mx-3 sm:mx-4 mb-2 p-3 sm:p-4 rounded-2xl border-jjk-purple/20">
+  <div id="mobile-menu" class="hidden md:hidden glass-card mx-3 sm:mx-4 mb-2 p-3 sm:p-4 rounded-2xl border-jjk-purple/20 max-w-[calc(100vw-1.5rem)]">
     <div class="flex flex-col gap-0.5">
       <% (data.navLinks || []).forEach(link => { %>
         <a href="<%= link.href %>" 

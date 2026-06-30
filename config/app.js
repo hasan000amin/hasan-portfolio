@@ -22,7 +22,7 @@ const config = {
     title: process.env.SITE_TITLE || 'Hasan Amin - Portfolio',
     description: process.env.SITE_DESCRIPTION || 'Fullstack Developer & Dosen',
     url: process.env.SITE_URL || 'https://hasanamin.my.id',
-    author: 'Hasan Amin, S.T., M.Sc.',
+    author: 'Hasan Amin',
   },
 
   // Email (optional)

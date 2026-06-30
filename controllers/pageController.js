@@ -15,7 +15,7 @@ const portfolioData = {
     { href: '#contact', label: 'Kontak' },
   ],
   personal: {
-    name: 'Hasan Amin, S.T., M.Sc.',
+    name: 'Hasan Amin',
     nickname: 'Hasan',
     titles: [
       'Fullstack Developer',
@@ -320,7 +320,7 @@ const portfolioData = {
  */
 exports.home = (req, res) => {
   res.render('index', {
-    title: 'Hasan Amin, S.T., M.Sc. - Fullstack Developer & Dosen',
+    title: 'Hasan Amin - Fullstack Developer & Dosen',
     description: 'Portfolio website Hasan Amin - Fullstack Developer, IoT Specialist, dan Dosen',
     data: portfolioData,
     siteTitle: 'Hasan Amin',
