@@ -9,6 +9,7 @@ require('dotenv').config();
 
 // Import configurations
 const appConfig = require('./config/app');
+const pkg = require('./package.json');
 const { errorHandler, notFoundHandler } = require('./middleware/errorHandler');
 
 // Import routes
@@ -58,8 +59,14 @@ app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 // Static Files
 // =============================================
 app.use(express.static(path.join(__dirname, 'public'), {
-  maxAge: process.env.NODE_ENV === 'production' ? '1y' : 0,
+  maxAge: process.env.NODE_ENV === 'production' ? '1d' : 0,
   etag: true,
+  setHeaders: (res, path) => {
+    // Don't cache HTML files
+    if (path.endsWith('.html')) {
+      res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
+    }
+  },
 }));
 
 // =============================================
@@ -71,6 +78,7 @@ app.use((req, res, next) => {
   res.locals.siteUrl = process.env.SITE_URL || 'https://hasanamin.my.id';
   res.locals.currentYear = new Date().getFullYear();
   res.locals.currentPath = req.path;
+  res.locals.buildVersion = pkg.version;
   res.locals.navLinks = [
     { label: 'Home', href: '#hero' },
     { label: 'About', href: '#about' },
