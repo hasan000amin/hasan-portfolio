@@ -1,0 +1,149 @@
+{
+  "lang": "id",
+  "dir": "ltr",
+
+  "nav": {
+    "hero": "Beranda",
+    "about": "Tentang",
+    "skills": "Keahlian",
+    "experience": "Pengalaman",
+    "projects": "Proyek",
+    "services": "Layanan",
+    "techstack": "Tech Stack",
+    "certificates": "Sertifikasi",
+    "contact": "Kontak"
+  },
+
+  "hero": {
+    "badge": "Fullstack Developer & Dosen",
+    "greeting": "Halo, saya",
+    "cta": {
+      "works": "Lihat Karya",
+      "contact": "Hubungi",
+      "more": "Selengkapnya"
+    },
+    "stats": {
+      "experience": "Tahun Pengalaman",
+      "apps": "Aplikasi Dibangun",
+      "roles": "Peran Aktif",
+      "certifications": "Sertifikasi"
+    }
+  },
+
+  "about": {
+    "code": "About",
+    "heading": "Tentang",
+    "heading_me": "Saya",
+    "subtitle": "Kenali lebih dekat perjalanan profesional saya",
+    "location": "Lokasi",
+    "email": "Email",
+    "university": "Universitas",
+    "faculty": "Fakultas",
+    "scholar": "Google Scholar",
+    "citations": "sitasi",
+    "download_cv": "Download CV",
+    "highlights_title": "Sorotan Karir",
+    "community": "Pengabdian Masyarakat (PKM)",
+    "publications": "Publikasi Terbaru",
+    "present": "Sekarang"
+  },
+
+  "skills": {
+    "code": "Skills",
+    "heading": "Keahlian",
+    "heading_skills": "Teknis",
+    "subtitle": "Bidang keahlian yang saya kuasai selama 10+ tahun berkarya"
+  },
+
+  "experience": {
+    "code": "Experience",
+    "heading": "Pengalaman",
+    "heading_exp": "Kerja",
+    "subtitle": "Perjalanan karir saya selama lebih dari satu dekade",
+    "badge_present": "Sekarang",
+    "badge_work": "Kerja",
+    "teaching_title": "Kegiatan Mengajar",
+    "teaching_subtitle": "Mata kuliah yang diampu semester ini"
+  },
+
+  "projects": {
+    "code": "Projects",
+    "heading": "Karya",
+    "heading_projects": "Proyek",
+    "subtitle": "Aplikasi dan sistem yang telah saya bangun selama 10+ tahun",
+    "filter": {
+      "all": "Semua",
+      "web": "Web App",
+      "iot": "IoT",
+      "industrial": "Industrial",
+      "ml": "ML"
+    },
+    "demo": "Demo",
+    "source": "Source"
+  },
+
+  "services": {
+    "code": "Services",
+    "heading": "Layanan",
+    "heading_services": "Saya",
+    "subtitle": "Solusi teknologi yang saya tawarkan untuk kebutuhan Anda"
+  },
+
+  "techstack": {
+    "code": "Tech Stack",
+    "heading": "Teknologi",
+    "heading_tech": "yang Digunakan",
+    "subtitle": "Tools dan teknologi yang saya kuasai dalam pengembangan"
+  },
+
+  "certificates": {
+    "code": "Certificates",
+    "heading": "Sertifikasi",
+    "heading_cert": "& Pelatihan",
+    "subtitle": "Sertifikasi dan pelatihan yang pernah saya tempuh",
+    "view": "Lihat Sertifikat",
+    "scholar_title": "Google Scholar",
+    "scholar_citations": "Sitasi",
+    "scholar_desc": "Publikasi penelitian yang telah terindeks",
+    "scholar_button": "Lihat Profile Scholar"
+  },
+
+  "contact": {
+    "code": "Contact",
+    "heading": "Hubungi",
+    "heading_touch": "Saya",
+    "subtitle": "Hubungi untuk konsultasi akademik atau kerjasama",
+    "info_title": "Informasi Kontak",
+    "location": "Lokasi",
+    "email": "Email",
+    "phone": "Telepon",
+    "university": "Universitas",
+    "follow": "Ikuti Saya",
+    "form": {
+      "title": "Kirim Pesan",
+      "desc": "Ada pertanyaan atau ingin berdiskusi? Jangan ragu untuk menghubungi saya.",
+      "name_label": "Nama Lengkap",
+      "email_label": "Email",
+      "subject_label": "Subjek",
+      "message_label": "Pesan",
+      "name_placeholder": "Nama Anda",
+      "email_placeholder": "email@anda.com",
+      "subject_placeholder": "Subjek pesan",
+      "message_placeholder": "Tulis pesan Anda di sini...",
+      "submit": "Kirim Pesan",
+      "success": "Terima kasih! Pesan Anda telah terkirim. Saya akan menghubungi Anda segera.",
+      "error": "Mohon lengkapi semua field yang wajib diisi (nama, email, pesan)."
+    }
+  },
+
+  "footer": {
+    "brand_desc": "Fullstack Developer & Dosen dengan 10+ tahun pengalaman di pengembangan web, IoT, dan keamanan sistem. Berdedikasi dalam menciptakan solusi teknologi yang inovatif.",
+    "nav_title": "Navigasi",
+    "contact_title": "Kontak",
+    "contact_location": "Lokasi",
+    "contact_email": "Email",
+    "contact_university": "Universitas",
+    "copyright": "Fullstack Developer &amp; Dosen",
+    "built_with": "Dibangun dengan ♥ dan Jujutsu Kaisen vibes"
+  }
+}

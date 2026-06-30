@@ -23,7 +23,10 @@ const portfolioData = {
       'Dosen',
       'Network Specialist',
     ],
-    headline: 'Fullstack Developer dengan 10+ tahun pengalaman di pengembangan web, IoT, dan keamanan sistem.',
+    headline: {
+      en: 'Fullstack Developer with 10+ years of experience in web development, IoT, and system security.',
+      id: 'Fullstack Developer dengan 10+ tahun pengalaman di pengembangan web, IoT, dan keamanan sistem.',
+    },
     location: 'Bandung, Jawa Barat',
     email: 'hasan@example.com', // TODO: Ganti dengan email asli
     phone: '+62xxx-xxxx-xxxx', // TODO: Ganti dengan nomor telepon
@@ -45,14 +48,20 @@ const portfolioData = {
 
   about: {
     description: [
-      'Fullstack Developer dengan 10+ tahun pengalaman di pengembangan web, IoT, dan keamanan sistem. Berpengalaman sebagai Software Developer di STT Duta Bangsa (2014–2024) dan saat ini aktif sebagai Remote Developer di PT. Sinergi Sarana Teknologi (2019–sekarang) serta Dosen di Universitas Pamulang (2024–sekarang).',
-      'Memiliki keahlian dalam pengembangan aplikasi berbasis web menggunakan Laravel, Node.js, dan Nuxt.js, serta pengembangan sistem IoT dengan ThingsBoard, MQTT, BeagleBone, dan SCADA. Aktif dalam penelitian dan pengabdian masyarakat, dengan publikasi di Google Scholar (10 sitasi, h-index 2).',
+      {
+        en: 'Fullstack Developer with 10+ years of experience in web development, IoT, and system security. Experienced as a Software Developer at STT Duta Bangsa (2014–2024), currently active as a Remote Developer at PT. Sinergi Sarana Teknologi (2019–present), and a Computer Systems Lecturer at Universitas Pamulang (2024–present).',
+        id: 'Fullstack Developer dengan 10+ tahun pengalaman di pengembangan web, IoT, dan keamanan sistem. Berpengalaman sebagai Software Developer di STT Duta Bangsa (2014–2024) dan saat ini aktif sebagai Remote Developer di PT. Sinergi Sarana Teknologi (2019–sekarang) serta Dosen di Universitas Pamulang (2024–sekarang).',
+      },
+      {
+        en: 'Skilled in developing web-based applications using Laravel, Node.js, and Nuxt.js, as well as IoT systems with ThingsBoard, MQTT, BeagleBone, and SCADA. Active in research and community service, with publications on Google Scholar (10 citations, h-index 2).',
+        id: 'Memiliki keahlian dalam pengembangan aplikasi berbasis web menggunakan Laravel, Node.js, dan Nuxt.js, serta pengembangan sistem IoT dengan ThingsBoard, MQTT, BeagleBone, dan SCADA. Aktif dalam penelitian dan pengabdian masyarakat, dengan publikasi di Google Scholar (10 sitasi, h-index 2).',
+      },
     ],
     stats: [
-      { label: 'Tahun Pengalaman', value: '10+' },
-      { label: 'Aplikasi Dibangun', value: '6+' },
-      { label: 'Peran Aktif', value: '3' },
-      { label: 'Sertifikasi', value: '2' },
+      { label: { en: 'Years Exp.', id: 'Tahun Pengalaman' }, value: '10+' },
+      { label: { en: 'Apps Built', id: 'Aplikasi Dibangun' }, value: '6+' },
+      { label: { en: 'Active Roles', id: 'Peran Aktif' }, value: '3' },
+      { label: { en: 'Certifications', id: 'Sertifikasi' }, value: '2' },
     ],
   },
 
@@ -73,24 +82,45 @@ const portfolioData = {
 
   experiences: [
     {
-      title: 'Dosen Sistem Komputer',
+      title: {
+        en: 'Computer Systems Lecturer',
+        id: 'Dosen Sistem Komputer',
+      },
       company: 'Universitas Pamulang',
-      period: '2024 – Sekarang',
-      description: 'Mengajar mata kuliah Jaringan Komputer, Praktikum Jaringan, Cloud Computing, dan Keamanan Komputer untuk program studi S1 Sistem Komputer.',
+      period: {
+        en: '2024 – Present',
+        id: '2024 – Sekarang',
+      },
+      description: {
+        en: 'Teaching Computer Networks, Computer Networks Practicum, Cloud Computing, and Computer Security courses for the Bachelor of Computer Systems program.',
+        id: 'Mengajar mata kuliah Jaringan Komputer, Praktikum Jaringan, Cloud Computing, dan Keamanan Komputer untuk program studi S1 Sistem Komputer.',
+      },
       type: 'work',
     },
     {
       title: 'Remote Developer',
       company: 'PT. Sinergi Sarana Teknologi',
-      period: '2019 – Sekarang',
-      description: 'Mengembangkan dan memelihara aplikasi berbasis web, IoT, dan sistem industrial. Implementasi solusi MQTT, SCADA, dan ThingsBoard untuk klien industri.',
+      period: {
+        en: '2019 – Present',
+        id: '2019 – Sekarang',
+      },
+      description: {
+        en: 'Developing and maintaining web-based, IoT, and industrial system applications. Implementing MQTT, SCADA, and ThingsBoard solutions for industrial clients.',
+        id: 'Mengembangkan dan memelihara aplikasi berbasis web, IoT, dan sistem industrial. Implementasi solusi MQTT, SCADA, dan ThingsBoard untuk klien industri.',
+      },
       type: 'work',
     },
     {
       title: 'Software Developer',
       company: 'STT Duta Bangsa',
-      period: '2014 – 2024',
-      description: 'Mengembangkan sistem informasi akademik, SIM Perpustakaan, SIM Praktikum, SIM Stock, SIM Repository, dan berbagai aplikasi internal kampus.',
+      period: {
+        en: '2014 – 2024',
+        id: '2014 – 2024',
+      },
+      description: {
+        en: 'Developing academic information systems, Library MIS, Practicum MIS, Stock MIS, Repository MIS, and various internal campus applications.',
+        id: 'Mengembangkan sistem informasi akademik, SIM Perpustakaan, SIM Praktikum, SIM Stock, SIM Repository, dan berbagai aplikasi internal kampus.',
+      },
       type: 'work',
     },
   ],
@@ -99,7 +129,10 @@ const portfolioData = {
     {
       title: 'SIM Perpustakaan',
       year: '2016',
-      description: 'Sistem Informasi Manajemen Perpustakaan berbasis web untuk mengelola koleksi buku, anggota, dan transaksi peminjaman.',
+      description: {
+        en: 'Web-based Library Management Information System for managing book collections, members, and borrowing transactions.',
+        id: 'Sistem Informasi Manajemen Perpustakaan berbasis web untuk mengelola koleksi buku, anggota, dan transaksi peminjaman.',
+      },
       tech: ['Laravel', 'MySQL', 'Bootstrap'],
       category: 'Web App',
       link: '#',
@@ -108,7 +141,10 @@ const portfolioData = {
     {
       title: 'SIM Praktikum',
       year: '2017',
-      description: 'Sistem informasi manajemen praktikum untuk mengelola jadwal, nilai, dan laporan praktikum mahasiswa.',
+      description: {
+        en: 'Practicum management information system for managing schedules, grades, and student practicum reports.',
+        id: 'Sistem informasi manajemen praktikum untuk mengelola jadwal, nilai, dan laporan praktikum mahasiswa.',
+      },
       tech: ['Laravel', 'MySQL', 'jQuery'],
       category: 'Web App',
       link: '#',
@@ -117,7 +153,10 @@ const portfolioData = {
     {
       title: 'SIM Stock',
       year: '2019',
-      description: 'Sistem Informasi Manajemen Stok barang untuk mengelola inventaris, transaksi masuk/keluar, dan laporan stok.',
+      description: {
+        en: 'Stock Management Information System for managing inventory, inbound/outbound transactions, and stock reports.',
+        id: 'Sistem Informasi Manajemen Stok barang untuk mengelola inventaris, transaksi masuk/keluar, dan laporan stok.',
+      },
       tech: ['Laravel', 'MySQL', 'Tailwind'],
       category: 'Web App',
       link: '#',
@@ -126,7 +165,10 @@ const portfolioData = {
     {
       title: 'SIM Repository',
       year: '2020',
-      description: 'Repository institusi untuk mengelola karya ilmiah, skripsi, dan publikasi akademik.',
+      description: {
+        en: 'Institutional repository for managing scientific works, theses, and academic publications.',
+        id: 'Repository institusi untuk mengelola karya ilmiah, skripsi, dan publikasi akademik.',
+      },
       tech: ['Laravel', 'MySQL', 'Vue.js'],
       category: 'Web App',
       link: '#',
@@ -135,7 +177,10 @@ const portfolioData = {
     {
       title: 'Fuel Management System',
       year: '2020',
-      description: 'Sistem manajemen bahan bakar berbasis IoT untuk monitoring dan kontrol distribusi BBM secara real-time.',
+      description: {
+        en: 'IoT-based fuel management system for real-time fuel distribution monitoring and control.',
+        id: 'Sistem manajemen bahan bakar berbasis IoT untuk monitoring dan kontrol distribusi BBM secara real-time.',
+      },
       tech: ['Node.js', 'MQTT', 'ThingsBoard', 'BeagleBone'],
       category: 'IoT',
       link: '#',
@@ -144,7 +189,10 @@ const portfolioData = {
     {
       title: 'SIM Wisuda',
       year: '2023',
-      description: 'Sistem informasi manajemen wisuda untuk pendaftaran, verifikasi, dan pengelolaan data peserta wisuda.',
+      description: {
+        en: 'Graduation management information system for registration, verification, and management of graduation participant data.',
+        id: 'Sistem informasi manajemen wisuda untuk pendaftaran, verifikasi, dan pengelolaan data peserta wisuda.',
+      },
       tech: ['Nuxt.js', 'Laravel', 'PostgreSQL'],
       category: 'Web App',
       link: '#',
@@ -153,7 +201,10 @@ const portfolioData = {
     {
       title: 'IoT Gas Leak Detector',
       year: '2024',
-      description: 'Alat pendeteksi kebocoran gas LPG berbasis BeagleBone dengan notifikasi real-time via MQTT.',
+      description: {
+        en: 'LPG gas leak detection device based on BeagleBone with real-time MQTT notifications.',
+        id: 'Alat pendeteksi kebocoran gas LPG berbasis BeagleBone dengan notifikasi real-time via MQTT.',
+      },
       tech: ['BeagleBone', 'MQTT', 'Node.js', 'ThingsBoard'],
       category: 'IoT',
       link: '#',
@@ -162,7 +213,10 @@ const portfolioData = {
     {
       title: 'SCADA Monitoring Dashboard',
       year: '2024',
-      description: 'Dashboard SCADA untuk monitoring dan kontrol proses industri secara real-time dengan visualisasi data sensor.',
+      description: {
+        en: 'SCADA dashboard for real-time industrial process monitoring and control with sensor data visualization.',
+        id: 'Dashboard SCADA untuk monitoring dan kontrol proses industri secara real-time dengan visualisasi data sensor.',
+      },
       tech: ['Node.js', 'MQTT', 'SCADA', 'WebSocket'],
       category: 'Industrial Automation',
       link: '#',
@@ -171,7 +225,10 @@ const portfolioData = {
     {
       title: 'Sentiment Analysis SVM-DT',
       year: '2024',
-      description: 'Analisis sentimen ulasan pengguna menggunakan metode Support Vector Machine dan Decision Tree.',
+      description: {
+        en: 'User review sentiment analysis using Support Vector Machine and Decision Tree methods.',
+        id: 'Analisis sentimen ulasan pengguna menggunakan metode Support Vector Machine dan Decision Tree.',
+      },
       tech: ['Python', 'Scikit-learn', 'Pandas', 'Flask'],
       category: 'Machine Learning',
       link: '#',
@@ -182,37 +239,55 @@ const portfolioData = {
   services: [
     {
       title: 'Web Development',
-      description: 'Pengembangan aplikasi web modern menggunakan Laravel, Node.js, Nuxt.js, dan teknologi terkini.',
+      description: {
+        en: 'Modern web application development using Laravel, Node.js, Nuxt.js, and the latest technologies.',
+        id: 'Pengembangan aplikasi web modern menggunakan Laravel, Node.js, Nuxt.js, dan teknologi terkini.',
+      },
       icon: 'globe',
       features: ['Full-stack Web App', 'RESTful API', 'Single Page Application', 'Progressive Web App'],
     },
     {
       title: 'IoT & Embedded Systems',
-      description: 'Solusi IoT end-to-end dari sensor hingga dashboard menggunakan BeagleBone, MQTT, ThingsBoard, dan SCADA.',
+      description: {
+        en: 'End-to-end IoT solutions from sensors to dashboard using BeagleBone, MQTT, ThingsBoard, and SCADA.',
+        id: 'Solusi IoT end-to-end dari sensor hingga dashboard menggunakan BeagleBone, MQTT, ThingsBoard, dan SCADA.',
+      },
       icon: 'cpu',
       features: ['Sensor Integration', 'Real-time Monitoring', 'MQTT Broker Setup', 'SCADA Systems'],
     },
     {
       title: 'Industrial Automation',
-      description: 'Automasi proses industri dengan integrasi sistem SCADA, PLC, dan dashboard monitoring.',
+      description: {
+        en: 'Industrial process automation with integration of SCADA systems, PLC, and monitoring dashboards.',
+        id: 'Automasi proses industri dengan integrasi sistem SCADA, PLC, dan dashboard monitoring.',
+      },
       icon: 'gauge',
       features: ['SCADA Implementation', 'PLC Programming', 'HMI Development', 'Process Optimization'],
     },
     {
       title: 'Cyber Security',
-      description: 'Audit dan konsultasi keamanan sistem untuk melindungi infrastruktur digital Anda.',
+      description: {
+        en: 'System security audit and consulting to protect your digital infrastructure.',
+        id: 'Audit dan konsultasi keamanan sistem untuk melindungi infrastruktur digital Anda.',
+      },
       icon: 'shield',
       features: ['Security Audit', 'Penetration Testing', 'Network Security', 'Security Hardening'],
     },
     {
       title: 'Machine Learning',
-      description: 'Implementasi machine learning untuk analisis data, prediksi, dan pengambilan keputusan cerdas.',
+      description: {
+        en: 'Machine learning implementation for data analysis, prediction, and intelligent decision making.',
+        id: 'Implementasi machine learning untuk analisis data, prediksi, dan pengambilan keputusan cerdas.',
+      },
       icon: 'brain',
       features: ['Data Analysis', 'Predictive Modeling', 'NLP & Sentiment Analysis', 'Classification'],
     },
     {
       title: 'Cloud & Server',
-      description: 'Setup dan manajemen server Linux, cloud infrastructure, dan deployment aplikasi.',
+      description: {
+        en: 'Linux server setup and management, cloud infrastructure, and application deployment.',
+        id: 'Setup dan manajemen server Linux, cloud infrastructure, dan deployment aplikasi.',
+      },
       icon: 'server',
       features: ['Ubuntu Server', 'Docker Container', 'CI/CD Pipeline', 'Cloud Migration'],
     },
@@ -246,21 +321,30 @@ const portfolioData = {
       title: 'CCNA Routing & Switching',
       issuer: 'Cisco Academy',
       year: '2019',
-      description: 'Sertifikasi jaringan tingkat associate mencakup routing, switching, dan troubleshooting jaringan.',
+      description: {
+        en: 'Associate-level networking certification covering routing, switching, and network troubleshooting.',
+        id: 'Sertifikasi jaringan tingkat associate mencakup routing, switching, dan troubleshooting jaringan.',
+      },
       link: '#',
     },
     {
       title: 'Workshop Ubuntu Server',
       issuer: 'Intra Training',
       year: '2017',
-      description: 'Pelatihan administrasi server Ubuntu meliputi instalasi, konfigurasi, dan keamanan server.',
+      description: {
+        en: 'Ubuntu Server administration training covering installation, configuration, and server security.',
+        id: 'Pelatihan administrasi server Ubuntu meliputi instalasi, konfigurasi, dan keamanan server.',
+      },
       link: '#',
     },
     {
       title: 'Wifi Corner 2.0',
       issuer: 'Universitas Bhayangkara',
       year: '2018',
-      description: 'Workshop manajemen jaringan nirkabel dan infrastruktur WiFi enterprise.',
+      description: {
+        en: 'Workshop on wireless network management and enterprise WiFi infrastructure.',
+        id: 'Workshop manajemen jaringan nirkabel dan infrastruktur WiFi enterprise.',
+      },
       link: '#',
     },
   ],
@@ -284,20 +368,38 @@ const portfolioData = {
 
   communityServices: [
     {
-      title: 'Implementasi Sistem Digital PHBI Maulid Nabi',
-      description: 'Pengelolaan kegiatan PHBI Maulid Nabi Muhammad SAW 1447H di Masjid Al-Husna Griya Sutera Balaraja',
+      title: {
+        en: 'Digital System Implementation for PHBI Maulid Nabi',
+        id: 'Implementasi Sistem Digital PHBI Maulid Nabi',
+      },
+      description: {
+        en: 'Management of PHBI Maulid Nabi Muhammad SAW 1447H activities at Al-Husna Mosque, Griya Sutera Balaraja',
+        id: 'Pengelolaan kegiatan PHBI Maulid Nabi Muhammad SAW 1447H di Masjid Al-Husna Griya Sutera Balaraja',
+      },
       year: '2025',
       type: 'PKM',
     },
     {
-      title: 'Teknologi IoT untuk Alat Pengingat Hidrasi Lansia',
-      description: 'Penerapan Teknologi IoT Melalui Simulasi Wokwi untuk Pengembangan Alat Pengingat Hidrasi Lansia di SMKN 3 Kota Serang',
+      title: {
+        en: 'IoT Technology for Elderly Hydration Reminder',
+        id: 'Teknologi IoT untuk Alat Pengingat Hidrasi Lansia',
+      },
+      description: {
+        en: 'Application of IoT Technology through Wokwi Simulation for Developing Elderly Hydration Reminder Devices at SMKN 3 Kota Serang',
+        id: 'Penerapan Teknologi IoT Melalui Simulasi Wokwi untuk Pengembangan Alat Pengingat Hidrasi Lansia di SMKN 3 Kota Serang',
+      },
       year: '2025',
       type: 'PKM',
     },
     {
-      title: 'Alat Pendeteksi Kebocoran Gas LPG Berbasis Beaglebone',
-      description: 'Pengenalan Alat Pendeteksi Kebocoran Gas LPG Berbasis Beaglebone untuk masyarakat',
+      title: {
+        en: 'LPG Gas Leak Detector Based on BeagleBone',
+        id: 'Alat Pendeteksi Kebocoran Gas LPG Berbasis Beaglebone',
+      },
+      description: {
+        en: 'Introduction of LPG Gas Leak Detection Device Based on BeagleBone for the community',
+        id: 'Pengenalan Alat Pendeteksi Kebocoran Gas LPG Berbasis Beaglebone untuk masyarakat',
+      },
       year: '2024',
       type: 'PKM',
     },
@@ -324,6 +426,7 @@ exports.home = (req, res) => {
     description: 'Portfolio website Hasan Amin - Fullstack Developer, IoT Specialist, dan Dosen',
     data: portfolioData,
     siteTitle: 'Hasan Amin',
+    lang: req.lang,
   });
 };
 
@@ -337,19 +440,20 @@ exports.contact = (req, res) => {
   if (!name || !email || !message) {
     return res.status(400).json({
       success: false,
-      message: 'Mohon lengkapi semua field yang wajib diisi (nama, email, pesan).',
+      message: req.lang === 'id'
+        ? 'Mohon lengkapi semua field yang wajib diisi (nama, email, pesan).'
+        : 'Please fill in all required fields (name, email, message).',
     });
   }
 
   // TODO: Implement email sending via nodemailer here
-  // Example:
-  // const transporter = nodemailer.createTransport({ ... });
-  // await transporter.sendMail({ ... });
 
   console.log(`📧 Contact form submission from ${name} (${email}): ${subject || '(no subject)'}`);
 
   res.json({
     success: true,
-    message: 'Terima kasih! Pesan Anda telah terkirim. Saya akan menghubungi Anda segera.',
+    message: req.lang === 'id'
+      ? 'Terima kasih! Pesan Anda telah terkirim. Saya akan menghubungi Anda segera.'
+      : 'Thank you! Your message has been sent. I\'ll get back to you soon.',
   });
 };

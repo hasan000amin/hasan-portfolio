@@ -1,0 +1,149 @@
+{
+  "lang": "en",
+  "dir": "ltr",
+
+  "nav": {
+    "hero": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "experience": "Experience",
+    "projects": "Projects",
+    "services": "Services",
+    "techstack": "Tech Stack",
+    "certificates": "Certificates",
+    "contact": "Contact"
+  },
+
+  "hero": {
+    "badge": "Fullstack Developer & Lecturer",
+    "greeting": "Hello, I'm",
+    "cta": {
+      "works": "View Works",
+      "contact": "Contact Me",
+      "more": "Learn More"
+    },
+    "stats": {
+      "experience": "Years Exp.",
+      "apps": "Apps Built",
+      "roles": "Active Roles",
+      "certifications": "Certifications"
+    }
+  },
+
+  "about": {
+    "code": "About",
+    "heading": "About",
+    "heading_me": "Me",
+    "subtitle": "Get to know my professional journey better",
+    "location": "Location",
+    "email": "Email",
+    "university": "University",
+    "faculty": "Faculty",
+    "scholar": "Google Scholar",
+    "citations": "Citations",
+    "download_cv": "Download CV",
+    "highlights_title": "Career Highlights",
+    "community": "Community Service (PKM)",
+    "publications": "Recent Publications",
+    "present": "Present"
+  },
+
+  "skills": {
+    "code": "Skills",
+    "heading": "Technical",
+    "heading_skills": "Skills",
+    "subtitle": "Areas of expertise I've mastered over 10+ years"
+  },
+
+  "experience": {
+    "code": "Experience",
+    "heading": "Work",
+    "heading_exp": "Experience",
+    "subtitle": "My career journey spanning over a decade",
+    "badge_present": "Present",
+    "badge_work": "Work",
+    "teaching_title": "Teaching Activities",
+    "teaching_subtitle": "Courses taught this semester"
+  },
+
+  "projects": {
+    "code": "Projects",
+    "heading": "Featured",
+    "heading_projects": "Projects",
+    "subtitle": "Applications and systems I've built over 10+ years",
+    "filter": {
+      "all": "All",
+      "web": "Web App",
+      "iot": "IoT",
+      "industrial": "Industrial",
+      "ml": "ML"
+    },
+    "demo": "Demo",
+    "source": "Source"
+  },
+
+  "services": {
+    "code": "Services",
+    "heading": "My",
+    "heading_services": "Services",
+    "subtitle": "Technology solutions I offer for your needs"
+  },
+
+  "techstack": {
+    "code": "Tech Stack",
+    "heading": "Technologies",
+    "heading_tech": "I Use",
+    "subtitle": "Tools and technologies I master in development"
+  },
+
+  "certificates": {
+    "code": "Certificates",
+    "heading": "Certifications",
+    "heading_cert": "& Training",
+    "subtitle": "Certifications and training I've completed",
+    "view": "View Certificate",
+    "scholar_title": "Google Scholar",
+    "scholar_citations": "Citations",
+    "scholar_desc": "Published research indexed in Google Scholar",
+    "scholar_button": "View Scholar Profile"
+  },
+
+  "contact": {
+    "code": "Contact",
+    "heading": "Get In",
+    "heading_touch": "Touch",
+    "subtitle": "Reach out for academic consultation or collaboration",
+    "info_title": "Contact Information",
+    "location": "Location",
+    "email": "Email",
+    "phone": "Phone",
+    "university": "University",
+    "follow": "Follow Me",
+    "form": {
+      "title": "Send Message",
+      "desc": "Have a question or want to discuss? Feel free to contact me.",
+      "name_label": "Full Name",
+      "email_label": "Email",
+      "subject_label": "Subject",
+      "message_label": "Message",
+      "name_placeholder": "Your Name",
+      "email_placeholder": "your@email.com",
+      "subject_placeholder": "Message subject",
+      "message_placeholder": "Write your message here...",
+      "submit": "Send Message",
+      "success": "Thank you! Your message has been sent. I'll get back to you soon.",
+      "error": "Please fill in all required fields (name, email, message)."
+    }
+  },
+
+  "footer": {
+    "brand_desc": "Fullstack Developer & Lecturer with 10+ years of experience in web development, IoT, and system security. Dedicated to creating innovative technology solutions.",
+    "nav_title": "Navigation",
+    "contact_title": "Contact",
+    "contact_location": "Location",
+    "contact_email": "Email",
+    "contact_university": "University",
+    "copyright": "Fullstack Developer &amp; Lecturer",
+    "built_with": "Built with ♥ and Jujutsu Kaisen vibes"
+  }
+}

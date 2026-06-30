@@ -15,8 +15,7 @@
           <span class="font-display font-bold text-base sm:text-lg text-white">Hasan<span class="text-jjk-purple-light">.</span></span>
         </div>
         <p class="text-gray-400 leading-relaxed max-w-md text-sm sm:text-base">
-          Fullstack Developer & Dosen dengan 10+ tahun pengalaman di pengembangan web, IoT, dan keamanan sistem. 
-          Berdedikasi dalam menciptakan solusi teknologi yang inovatif.
+          <%= __('footer.brand_desc') %>
         </p>
         <%# Social Links %>
         <div class="flex gap-2 sm:gap-3 mt-4 sm:mt-6">
@@ -37,12 +36,12 @@
 
       <%# Column 2 - Quick Links %>
       <div>
-        <h3 class="font-display font-semibold text-white mb-3 sm:mb-4 text-sm sm:text-base">Navigasi</h3>
+        <h3 class="font-display font-semibold text-white mb-3 sm:mb-4 text-sm sm:text-base"><%= __('footer.nav_title') %></h3>
         <ul class="space-y-2 sm:space-y-2.5">
           <% (data.navLinks || []).forEach(link => { %>
             <li>
               <a href="<%= link.href %>" class="text-gray-400 hover:text-jjk-purple-light transition-colors duration-300 text-xs sm:text-sm">
-                <%= link.label %>
+                <%= __('nav.' + link.href.replace('#', '')) %>
               </a>
             </li>
           <% }) %>
@@ -51,18 +50,18 @@
 
       <%# Column 3 - Contact %>
       <div>
-        <h3 class="font-display font-semibold text-white mb-3 sm:mb-4 text-sm sm:text-base">Kontak</h3>
+        <h3 class="font-display font-semibold text-white mb-3 sm:mb-4 text-sm sm:text-base"><%= __('footer.contact_title') %></h3>
         <ul class="space-y-2 sm:space-y-3 text-xs sm:text-sm">
           <li>
-            <span class="text-gray-500 block">Lokasi</span>
+            <span class="text-gray-500 block"><%= __('footer.contact_location') %></span>
             <span class="text-gray-300"><%= data.personal.location %></span>
           </li>
           <li>
-            <span class="text-gray-500 block">Email</span>
+            <span class="text-gray-500 block"><%= __('footer.contact_email') %></span>
             <span class="text-gray-300 break-all"><%= data.personal.email %></span>
           </li>
           <li>
-            <span class="text-gray-500 block">Universitas</span>
+            <span class="text-gray-500 block"><%= __('footer.contact_university') %></span>
             <span class="text-gray-300"><%= data.personal.university %></span>
           </li>
         </ul>
@@ -74,10 +73,10 @@
   <div class="border-t border-white/5">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 sm:py-6 flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4">
       <p class="text-gray-500 text-xs sm:text-sm text-center sm:text-left">
-        &copy; <%= new Date().getFullYear() %> <a href="https://hasanamin.my.id" class="text-jjk-purple-light hover:text-jjk-purple transition-colors">Hasan Amin</a> — Fullstack Developer &amp; Dosen
+        &copy; <%= new Date().getFullYear() %> <a href="https://hasanamin.my.id" class="text-jjk-purple-light hover:text-jjk-purple transition-colors">Hasan Amin</a> — <%= __('footer.copyright') %>
       </p>
       <p class="text-gray-600 text-[10px] sm:text-xs">
-        Dibangun dengan <span class="text-jjk-purple-light">♥</span> dan Jujutsu Kaisen vibes
+        <%= __('footer.built_with') %>
       </p>
     </div>
   </div>

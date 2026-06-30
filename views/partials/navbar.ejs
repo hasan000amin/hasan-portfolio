@@ -25,7 +25,7 @@
         <% (data.navLinks || []).forEach(link => { %>
           <a href="<%= link.href %>" 
              class="nav-link px-3 py-2 text-sm">
-            <%= link.label %>
+            <%= __('nav.' + link.href.replace('#', '')) %>
           </a>
         <% }) %>
         
@@ -39,6 +39,7 @@
             <path d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"/>
           </svg>
         </button>
+        <a href="?lang=<%= lang === 'en' ? 'id' : 'en' %>" class="ml-2 p-2.5 rounded-xl glass-card hover:border-jjk-purple/30 transition-all duration-300 text-xs text-gray-400 hover:text-jjk-purple-light" aria-label="Switch language"><%= lang === 'en' ? '🇮🇩' : '🇬🇧' %></a>
       </div>
 
       <%# Mobile Menu Button %>
@@ -52,6 +53,7 @@
             <path d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"/>
           </svg>
         </button>
+        <a href="?lang=<%= lang === 'en' ? 'id' : 'en' %>" class="p-2 rounded-xl glass-card hover:border-jjk-purple/30 transition-all duration-300 text-xs text-gray-400" aria-label="Switch language"><%= lang === 'en' ? '🇮🇩' : '🇬🇧' %></a>
         <button id="mobile-menu-btn" class="p-2 rounded-xl glass-card hover:border-jjk-purple/30 transition-all duration-300" aria-label="Menu">
           <svg class="w-5 h-5 text-gray-300" id="menu-icon-open" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
@@ -70,7 +72,7 @@
       <% (data.navLinks || []).forEach(link => { %>
         <a href="<%= link.href %>" 
            class="nav-link px-3 py-2.5 text-sm rounded-xl hover:bg-jjk-glass-medium transition-all duration-300">
-          <%= link.label %>
+          <%= __('nav.' + link.href.replace('#', '')) %>
         </a>
       <% }) %>
     </div>

@@ -11,6 +11,7 @@ require('dotenv').config();
 const appConfig = require('./config/app');
 const pkg = require('./package.json');
 const { errorHandler, notFoundHandler } = require('./middleware/errorHandler');
+const { i18nMiddleware } = require('./middleware/i18n');
 
 // Import routes
 const indexRoutes = require('./routes/index');
@@ -42,6 +43,9 @@ app.use(require('morgan')(process.env.NODE_ENV === 'production' ? 'combined' : '
 
 // Compression
 app.use(require('compression')());
+
+// Cookie parser (for i18n lang cookie)
+app.use(require('cookie-parser')());
 
 // Body parsing
 app.use(express.json({ limit: '10mb' }));
@@ -92,6 +96,11 @@ app.use((req, res, next) => {
   ];
   next();
 });
+
+// =============================================
+// i18n Middleware - Bilingual (EN/ID)
+// =============================================
+app.use(i18nMiddleware);
 
 // =============================================
 // Routes

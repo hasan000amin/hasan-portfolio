@@ -1,6 +1,6 @@
 {
   "name": "portfolio-hasan-amin",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Portfolio website - Hasan Amin - Fullstack Developer & Dosen",
   "main": "app.js",
   "scripts": {
@@ -11,12 +11,18 @@
     "start": "node app.js",
     "lint": "echo 'Lint not configured yet'"
   },
-  "keywords": ["portfolio", "hasan-amin", "fullstack", "developer"],
+  "keywords": [
+    "portfolio",
+    "hasan-amin",
+    "fullstack",
+    "developer"
+  ],
   "author": "Hasan Amin",
   "license": "MIT",
   "dependencies": {
     "axios": "^1.7.0",
     "compression": "^1.7.4",
+    "cookie-parser": "^1.4.7",
     "cors": "^2.8.5",
     "dotenv": "^16.4.0",
     "ejs": "^3.1.10",
